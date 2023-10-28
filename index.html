@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic IA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-3">Diagnostic IA</h1>
+        <form id="diagnosisForm">
+            <div class="form-group">
+                <label for="age">Âge</label>
+                <input type="number" class="form-control" id="age" placeholder="Entrez votre âge">
+            </div>
+            <div class="form-group">
+                <label for="sex">Sexe</label>
+                <select class="form-control" id="sex">
+                    <option value="" disabled selected>Sélectionnez votre sexe</option>
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                </select>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="pregnant">
+                <label class="form-check-label" for="pregnant">Enceinte</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="disabled">
+                <label class="form-check-label" for="disabled">Handicapé</label>
+            </div>
+            <div class="form-group">
+                <label for="allergies">Allergies</label>
+                <input type="text" class="form-control" id="allergies" placeholder="Listez vos allergies">
+            </div>
+            <div class="form-group">
+                <label for="symptoms">Symptômes</label>
+                <input type="text" class="form-control" id="symptoms" placeholder="Listez vos symptômes">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="getDiagnosis()">Obtenir un Diagnostic</button>
+        </form>
+        <p id="output" class="mt-4"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
